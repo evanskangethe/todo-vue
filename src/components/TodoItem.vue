@@ -23,12 +23,12 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 0px;
+  display: grid;
+  grid-template-columns:90% 10%;
 }
 li {
-  display: inline-block;
   background-color: white;
   padding: 10px 2px;
-  width: 90%;
   margin-bottom: 5px;
   margin-right: 5px;
 }

@@ -1,5 +1,5 @@
 <template>
-    <img alt="remove_logo" src="../assets/remove.svg">
+    <img src="../assets/remove.svg" alt="remove_logo">
 </template>
 <script>
 export default {
@@ -9,8 +9,8 @@ export default {
 
 <style>
     img{
-        width: 40px;
-        height: 40px;
+        width: 38px;
+        height: 38px;
     }
 </style>
 
