@@ -13,16 +13,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
 ul {
   list-style-type: none;
   padding: 0;
+  margin: 0px;
 }
 li {
   display: inline-block;
-  margin: 0 10px;
+  background-color: white;
+  padding: 10px 2px;
+  width: 90%;
+  margin-bottom: 5px;
 }
 a {
   color: #42b983;
