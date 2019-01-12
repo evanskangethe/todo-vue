@@ -1,13 +1,19 @@
 <template>
     <ul>
       <li>{{todo.text}}</li>
+      <remove-button/>
     </ul>
 </template>
 
 <script>
+import RemoveButton from './BaseRemoveButton.vue'
+
 export default {
   name: 'HelloWorld',
-  props: ['todo']
+  props: ['todo'],
+  components:{
+    RemoveButton
+  }
 }
 </script>
 
@@ -24,6 +30,7 @@ li {
   padding: 10px 2px;
   width: 90%;
   margin-bottom: 5px;
+  margin-right: 5px;
 }
 a {
   color: #42b983;
