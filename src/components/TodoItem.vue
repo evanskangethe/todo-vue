@@ -1,15 +1,13 @@
 <template>
-  <div>
-    todo item
-  </div>
+    <ul>
+      <li>{{todo.text}}</li>
+    </ul>
 </template>
 
 <script>
 export default {
   name: 'HelloWorld',
-  props: {
-    
-  }
+  props: ['todo']
 }
 </script>
 
