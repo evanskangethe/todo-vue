@@ -22,7 +22,7 @@ export default {
 ul {
   list-style-type: none;
   padding: 0;
-  margin: 0px;
+  margin:0;
   display: grid;
   grid-template-columns:90% 10%;
 }

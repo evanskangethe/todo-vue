@@ -2,17 +2,20 @@
   <div id="app">
     <img id='logo' alt="Vue logo" src="./assets/logo.png">
     <h2>VUE TO DO</h2>
+    <base-input v-model="newTodo"/>
     <todo-item v-for = "todo in todos" :todo = "todo" :key="todo.id"/>
   </div>
 </template>
 
 <script>
 import TodoItem from './components/TodoItem.vue'
+import BaseInput from './components/BaseInput.vue'
 
 export default {
   name: 'todo',
   components: {
-    TodoItem
+    TodoItem,
+    BaseInput
   },
   data(){
     return{
@@ -20,7 +23,8 @@ export default {
         {id:1,text:'Learn Vue'},
         {id:2,text:'Make a TODO app'}
       ],
-      nextTodoId:3 
+      nextTodoId:3,
+      newTodo: ''
     }
   }
 }
