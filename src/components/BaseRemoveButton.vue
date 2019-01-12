@@ -1,5 +1,5 @@
 <template>
-    <img src="../assets/remove.svg" alt="remove_logo">
+    <button id='btn'></button>
 </template>
 <script>
 export default {
@@ -8,9 +8,11 @@ export default {
 </script>
 
 <style>
-    img{
-        width: 38px;
-        height: 38px;
+    #btn{
+        width: 40px;
+        height: 40px;
+        background-image: url('../assets/remove.svg');
+        background-repeat: no-repeat;
     }
 </style>
 

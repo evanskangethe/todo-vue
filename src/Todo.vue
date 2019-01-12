@@ -21,10 +21,17 @@ export default {
     return{
       todos:[
         {id:1,text:'Learn Vue'},
-        {id:2,text:'Make a TODO app'}
+        {id:2,text:'Make a TODO App'}
       ],
       nextTodoId:3,
       newTodo: ''
+    }
+  },
+  methods:{
+    addTodo:function(){
+      this.todos.push({id:this.nextTodoId,text:this.newTodo});
+      this.nextTodoId += 1;
+      this.newTodo = '';
     }
   }
 }
