@@ -18,13 +18,20 @@ export default {
 </script>
 
 <style>
+body{
+  background-color:rgb(25, 219, 171); 
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 5% auto;
+  max-width: 500px;
+  padding: 20px;
+  background-color:rgb(224, 227, 231);
+  border-radius: 5px;
 }
 #logo{
   width: 50px;
