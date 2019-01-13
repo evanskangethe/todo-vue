@@ -2,20 +2,20 @@
   <div id="app">
     <img id='logo' alt="Vue logo" src="./assets/logo.png">
     <h2>VUE TO DO</h2>
-    <base-input v-model="newTodo"/>
+    <todo-input v-model="newTodo" @add="addTodo"/>
     <todo-item v-for = "todo in todos" :todo = "todo" :key="todo.id"/>
   </div>
 </template>
 
 <script>
 import TodoItem from './components/TodoItem.vue'
-import BaseInput from './components/BaseInput.vue'
+import TodoInput from './components/TodoInput.vue'
 
 export default {
   name: 'todo',
   components: {
     TodoItem,
-    BaseInput
+    TodoInput
   },
   data(){
     return{
@@ -32,6 +32,9 @@ export default {
       this.todos.push({id:this.nextTodoId,text:this.newTodo});
       this.nextTodoId += 1;
       this.newTodo = '';
+    },
+    onDeleteItem(todo){
+        this.todos = this.todos.filter(item => item !== todo);
     }
   }
 }

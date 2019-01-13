@@ -1,19 +1,14 @@
 <template>
     <ul>
       <li>{{todo.text}}</li>
-      <remove-button/>
+      <button id='btn'></button>
     </ul>
 </template>
 
 <script>
-import RemoveButton from './BaseRemoveButton.vue'
-
 export default {
   name: 'HelloWorld',
-  props: ['todo'],
-  components:{
-    RemoveButton
-  }
+  props: ['todo']
 }
 </script>
 
@@ -34,5 +29,11 @@ li {
 }
 a {
   color: #42b983;
+}
+#btn{
+  width: 40px;
+  height: 40px;
+  background-image: url('../assets/remove.svg');
+  background-repeat: no-repeat;
 }
 </style>
