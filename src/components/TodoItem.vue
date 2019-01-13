@@ -1,14 +1,19 @@
 <template>
     <ul>
       <li>{{todo.text}}</li>
-      <button id='btn'></button>
+      <button id='btn' @click="removeItem(todo)"></button>
     </ul>
 </template>
 
 <script>
 export default {
   name: 'HelloWorld',
-  props: ['todo']
+  props: ['todo'],
+  methods:{
+    removeItem: function(item){
+      this.$emit('remove',item)
+    }
+  }
 }
 </script>
 

@@ -3,7 +3,7 @@
     <img id='logo' alt="Vue logo" src="./assets/logo.png">
     <h2>VUE TO DO</h2>
     <todo-input v-model="newTodo" @add="addTodo"/>
-    <todo-item v-for = "todo in todos" :todo = "todo" :key="todo.id"/>
+    <todo-item v-for = "todo in todos" :todo = "todo" :key="todo.id" @remove="onDeleteItem"/>
   </div>
 </template>
 
@@ -29,6 +29,8 @@ export default {
   },
   methods:{
     addTodo:function(){
+      if (this.newTodo === '') return
+
       this.todos.push({id:this.nextTodoId,text:this.newTodo});
       this.nextTodoId += 1;
       this.newTodo = '';
@@ -54,7 +56,7 @@ body{
   max-width: 500px;
   padding: 20px;
   background-color:rgb(224, 227, 231);
-  border-radius: 5px;
+  border-radius: 10px;
 }
 #logo{
   width: 50px;
