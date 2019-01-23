@@ -2,7 +2,8 @@
     <div id="input_layout">
         <input
         v-bind:value="value"
-        v-on:input="$emit('input',$event.target.value)">
+        v-on:input="$emit('input',$event.target.value)"
+        @keydown.enter="addItem">
         <button id='btn' @click="addItem"></button>
     </div>
 </template>

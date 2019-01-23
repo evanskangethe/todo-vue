@@ -19,11 +19,6 @@ export default {
   },
   data(){
     return{
-      todos:[
-        {id:1,text:'Learn Vue'},
-        {id:2,text:'Make a TODO App'}
-      ],
-      nextTodoId:3,
       newTodo: ''
     }
   },
@@ -31,12 +26,16 @@ export default {
     addTodo:function(){
       if (this.newTodo === '') return
 
-      this.todos.push({id:this.nextTodoId,text:this.newTodo});
-      this.nextTodoId += 1;
+      this.$store.commit('addTodos',this.newTodo)
       this.newTodo = '';
     },
     onDeleteItem(todo){
-        this.todos = this.todos.filter(item => item !== todo);
+        this.$store.commit('onDeleteItems',todo)
+    }
+  },
+  computed: {
+    todos() {
+      return this.$store.state.todos;
     }
   }
 }
